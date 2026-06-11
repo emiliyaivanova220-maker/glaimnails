@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти – GlaimNails</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">GlaimNails</a>
+    <ul>
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="gallery.html">Галерия</a></li>
+      <li><a href="about.html">За нас</a></li>
+      <li><a href="contact.html" class="active">Контакти</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div style="background: linear-gradient(135deg, #f5e6e6, #e8c4c4); padding: 60px 24px; text-align:center;">
+  <h1 class="section-title" style="margin-bottom:12px;">Свържете се с нас</h1>
+  <p style="color:#7a4f4f; max-width:480px; margin:0 auto;">Запазете час, задайте въпрос или просто кажете здравейте — с удоволствие ще отговорим.</p>
+</div>
+
+<!-- Contact grid -->
+<div class="section">
+  <div class="contact-grid">
+
+    <!-- Info -->
+    <div class="contact-info">
+      <h3>Намерете ни</h3>
+      <ul>
+        <li>
+          <span>📍</span>
+          <span>ул. „Роза" 12, ет. 1, София 1000</span>
+        </li>
+        <li>
+          <span>📞</span>
+          <span>+359 88 123 4567</span>
+        </li>
+        <li>
+          <span>📧</span>
+          <span>info@glaimnails.bg</span>
+        </li>
+        <li>
+          <span>📱</span>
+          <span>Instagram: @glaimnails.bg</span>
+        </li>
+        <li>
+          <span>💬</span>
+          <span>Facebook: GlaimNails Studio</span>
+        </li>
+      </ul>
+
+      <h3 style="margin-top:36px;">Работно време</h3>
+      <table class="hours-table">
+        <tbody>
+          <tr><td>Понеделник – Петък</td><td>09:00 – 20:00</td></tr>
+          <tr><td>Събота</td><td>10:00 – 19:00</td></tr>
+          <tr><td>Неделя</td><td>10:00 – 17:00</td></tr>
+          <tr><td>Официални празници</td><td>По договаряне</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Map placeholder -->
+      <div style="margin-top:32px; background:var(--blush); border-radius:12px; height:200px; display:flex; align-items:center; justify-content:center; color:var(--mid); font-size:0.9rem; border:1.5px dashed var(--rose);">
+        🗺️ &nbsp; Карта — ул. „Роза" 12, София
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div>
+      <h3 style="font-family:var(--ff-display); font-size:1.5rem; margin-bottom:24px;">Запази час онлайн</h3>
+      <div class="contact-form">
+        <div class="form-group">
+          <label for="name">Вашето име</label>
+          <input type="text" id="name" name="name" placeholder="Мария Иванова">
+        </div>
+        <div class="form-group">
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" name="phone" placeholder="+359 88 ...">
+        </div>
+        <div class="form-group">
+          <label for="email">Имейл</label>
+          <input type="email" id="email" name="email" placeholder="maria@example.com">
+        </div>
+        <div class="form-group">
+          <label for="service">Желана услуга</label>
+          <select id="service" name="service">
+            <option value="">— Изберете —</option>
+            <option>Класически маникюр</option>
+            <option>Гел лак маникюр</option>
+            <option>Изграждане с гел</option>
+            <option>Изграждане с акрил</option>
+            <option>Nail Art</option>
+            <option>Класически педикюр</option>
+            <option>СПА педикюр</option>
+            <option>VIP пакет</option>
+            <option>Друго</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Предпочитана дата</label>
+          <input type="date" id="date" name="date">
+        </div>
+        <div class="form-group">
+          <label for="time">Предпочитан час</label>
+          <select id="time" name="time">
+            <option value="">— Изберете —</option>
+            <option>09:00</option>
+            <option>10:00</option>
+            <option>11:00</option>
+            <option>12:00</option>
+            <option>13:00</option>
+            <option>14:00</option>
+            <option>15:00</option>
+            <option>16:00</option>
+            <option>17:00</option>
+            <option>18:00</option>
+            <option>19:00</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Допълнителни бележки</label>
+          <textarea id="message" name="message" placeholder="Имате ли предпочитан дизайн, алергии или специфични желания?"></textarea>
+        </div>
+        <button type="button" class="btn" style="width:100%; text-align:center; cursor:pointer; border:none; font-family:var(--ff-body);">
+          Изпрати заявката
+        </button>
+        <p style="font-size:0.82rem; color:var(--mid); text-align:center;">Ще ви се обадим в рамките на 2 часа за потвърждение.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="bg-blush">
+  <div class="section">
+    <h2 class="section-title">Често задавани въпроси</h2>
+    <p class="section-sub">Кратък списък с отговори на най-честите въпроси.</p>
+    <ul style="list-style:none; display:flex; flex-direction:column; gap:16px;">
+      <li style="padding:20px; background:var(--white); border-radius:10px;">
+        <strong style="color:var(--accent);">Трябва ли да запазвам час предварително?</strong>
+        <p style="margin-top:6px; color:var(--mid); font-size:0.92rem;">Препоръчително е, особено за уикенда и по-сложни процедури. Приемаме и клиентки без час, ако има свободен слот.</p>
+      </li>
+      <li style="padding:20px; background:var(--white); border-radius:10px;">
+        <strong style="color:var(--accent);">Колко издържа гел лакът?</strong>
+        <p style="margin-top:6px; color:var(--mid); font-size:0.92rem;">При правилна грижа — 2 до 3 седмици. Предлагаме безплатна корекция до 5 дни след процедурата.</p>
+      </li>
+      <li style="padding:20px; background:var(--white); border-radius:10px;">
+        <strong style="color:var(--accent);">Работите ли с деца?</strong>
+        <p style="margin-top:6px; color:var(--mid); font-size:0.92rem;">Да, имаме специална детска услуга — класически лак и декорации за деца над 6 години.</p>
+      </li>
+      <li style="padding:20px; background:var(--white); border-radius:10px;">
+        <strong style="color:var(--accent);">Как да се подготвя за процедурата?</strong>
+        <p style="margin-top:6px; color:var(--mid); font-size:0.92rem;">Желателно е да не нанасяте крем на ръцете преди маникюр. За педикюр — вземете по-отворени обувки.</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 GlaimNails. Всички права запазени.</p>
+  <p style="margin-top:8px;">📍 ул. „Роза" 12, София &nbsp;|&nbsp; 📞 +359 88 123 4567 &nbsp;|&nbsp; <a href="mailto:info@glaimnails.bg">info@glaimnails.bg</a></p>
+</footer>
+
+</body>
+</html>

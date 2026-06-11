@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерия – GlaimNails</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .filter-bar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .filter-btn {
+      padding: 8px 22px;
+      border: 1.5px solid var(--rose);
+      border-radius: 50px;
+      font-family: var(--ff-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      background: var(--white);
+      color: var(--mid);
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--white);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      background: var(--rose);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      position: relative;
+      transition: transform 0.2s;
+    }
+
+    .gallery-item:hover { transform: scale(1.03); }
+
+    .gallery-item .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(43,26,26,0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-align: center;
+      padding: 12px;
+    }
+
+    .gallery-item:hover .overlay { opacity: 1; }
+
+    .gallery-item.tall { grid-row: span 2; aspect-ratio: unset; min-height: 300px; }
+
+    @media (max-width: 600px) {
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">GlaimNails</a>
+    <ul>
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="gallery.html" class="active">Галерия</a></li>
+      <li><a href="about.html">За нас</a></li>
+      <li><a href="contact.html">Контакти</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div style="background: linear-gradient(135deg, #f5e6e6, #e8c4c4); padding: 60px 24px; text-align:center;">
+  <h1 class="section-title" style="margin-bottom:12px;">Нашата галерия</h1>
+  <p style="color:#7a4f4f; max-width:480px; margin:0 auto;">Вдъхнови се от нашите реализации — всеки дизайн е уникален и изработен с любов.</p>
+</div>
+
+<div class="section">
+
+  <div class="filter-bar">
+    <button class="filter-btn active">Всички</button>
+    <button class="filter-btn">Класически</button>
+    <button class="filter-btn">Гел лак</button>
+    <button class="filter-btn">Nail Art</button>
+    <button class="filter-btn">Изграждане</button>
+    <button class="filter-btn">Сезонни</button>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item tall" style="background:#f0d5d5; font-size:5rem;">
+      💅
+      <div class="overlay">Класически гел лак<br>Розово-беж</div>
+    </div>
+    <div class="gallery-item" style="background:#e8c4d0;">
+      ✨
+      <div class="overlay">Хром ефект<br>Сребро</div>
+    </div>
+    <div class="gallery-item" style="background:#d4c4e8;">
+      🌸
+      <div class="overlay">Цветен Nail Art<br>Пролет 2025</div>
+    </div>
+    <div class="gallery-item" style="background:#c4d4e8;">
+      🦋
+      <div class="overlay">Пеперуди 3D<br>Гел изграждане</div>
+    </div>
+    <div class="gallery-item" style="background:#e8d4c4;">
+      🌙
+      <div class="overlay">Галактика ефект<br>Тъмно синьо</div>
+    </div>
+    <div class="gallery-item tall" style="background:#e8c4c4; font-size:5rem;">
+      🎨
+      <div class="overlay">Ръчно рисуване<br>Цветя</div>
+    </div>
+    <div class="gallery-item" style="background:#c4e8d4;">
+      🍀
+      <div class="overlay">Зелен градиент<br>Омбре</div>
+    </div>
+    <div class="gallery-item" style="background:#e8e4c4;">
+      ⭐
+      <div class="overlay">Глитер ефект<br>Злато</div>
+    </div>
+    <div class="gallery-item" style="background:#d4e8c4;">
+      🌿
+      <div class="overlay">Естествен стил<br>Нюд с листа</div>
+    </div>
+  </div>
+
+  <!-- List of recent works -->
+  <div style="margin-top:60px;">
+    <h2 class="section-title">Последни реализации</h2>
+    <p class="section-sub">Преглед на нашите скорошни клиентки.</p>
+    <ul style="list-style:none; display:flex; flex-direction:column; gap:14px;">
+      <li style="display:flex; align-items:center; gap:16px; padding:16px; background:var(--blush); border-radius:10px;">
+        <span style="font-size:1.5rem;">✦</span>
+        <div>
+          <strong>Мария К.</strong> — Изграждане с гел + Nail Art (3D рози)
+          <span style="color:var(--mid); font-size:0.85rem; margin-left:12px;">Май 2025</span>
+        </div>
+      </li>
+      <li style="display:flex; align-items:center; gap:16px; padding:16px; background:var(--blush); border-radius:10px;">
+        <span style="font-size:1.5rem;">✦</span>
+        <div>
+          <strong>Елена Д.</strong> — Хром гел лак, сребристо-лилав ефект
+          <span style="color:var(--mid); font-size:0.85rem; margin-left:12px;">Май 2025</span>
+        </div>
+      </li>
+      <li style="display:flex; align-items:center; gap:16px; padding:16px; background:var(--blush); border-radius:10px;">
+        <span style="font-size:1.5rem;">✦</span>
+        <div>
+          <strong>Виктория П.</strong> — VIP пакет: изграждане + СПА педикюр + сезонен дизайн
+          <span style="color:var(--mid); font-size:0.85rem; margin-left:12px;">Април 2025</span>
+        </div>
+      </li>
+      <li style="display:flex; align-items:center; gap:16px; padding:16px; background:var(--blush); border-radius:10px;">
+        <span style="font-size:1.5rem;">✦</span>
+        <div>
+          <strong>Ива С.</strong> — Класически маникюр, нюд с пъстри нокти
+          <span style="color:var(--mid); font-size:0.85rem; margin-left:12px;">Април 2025</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <p class="text-center mt-8">
+    <a href="contact.html" class="btn">Запази час за твоя дизайн</a>
+  </p>
+</div>
+
+<footer>
+  <p>&copy; 2025 GlaimNails. Всички права запазени.</p>
+  <p style="margin-top:8px;">📍 ул. „Роза" 12, София &nbsp;|&nbsp; 📞 +359 88 123 4567 &nbsp;|&nbsp; <a href="mailto:info@glaimnails.bg">info@glaimnails.bg</a></p>
+</footer>
+
+</body>
+</html>
